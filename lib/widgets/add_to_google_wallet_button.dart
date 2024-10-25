@@ -123,6 +123,11 @@ class AddToGoogleWalletButton extends StatelessWidget {
         final path = await _validateAndReturnPath(code);
         if (path == null) continue defaultPath;
         return _getPath(code);
+      case 'br':
+        const code = 'ptBR';
+        final path = await _validateAndReturnPath(code);
+        if (path == null) continue defaultPath;
+        return _getPath(code);
       defaultPath:
       default:
         return _getPath(_defaultLanguageCode + _defaultCountryCode);
